@@ -1,4 +1,4 @@
-package by.itechartgroup.exercises;
+package by.itechartgroup.exercises.task12;
 
 public class SpeedConverter {
 

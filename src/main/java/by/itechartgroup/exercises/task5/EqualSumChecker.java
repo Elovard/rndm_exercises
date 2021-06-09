@@ -1,4 +1,4 @@
-package by.itechartgroup.exercises;
+package by.itechartgroup.exercises.task5;
 
 public class EqualSumChecker {
 

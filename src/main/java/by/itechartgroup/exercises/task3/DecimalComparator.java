@@ -1,4 +1,4 @@
-package by.itechartgroup.exercises;
+package by.itechartgroup.exercises.task3;
 
 public class DecimalComparator {
 

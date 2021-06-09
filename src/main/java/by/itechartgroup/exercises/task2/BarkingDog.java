@@ -1,4 +1,4 @@
-package by.itechartgroup.exercises;
+package by.itechartgroup.exercises.task2;
 
 public class BarkingDog {
 
@@ -10,18 +10,24 @@ public class BarkingDog {
         if(hourOfDay > 24){
             System.out.println("Invalid time");
             return false;
-        } else if (hourOfDay < 0){
+        }
+
+        if (hourOfDay < 0){
             System.out.println("Invalid time");
             return false;
-        } else if (barking && hourOfDay >= 22){
-            System.out.println("We wake up");
-            return true;
-        } else if (barking && hourOfDay < 8){
-            System.out.println("We wake up");
-            return true;
-        } else {
-            System.out.println("We don't wake up");
-            return false;
         }
+
+        if (barking && hourOfDay >= 22){
+            System.out.println("We wake up");
+            return true;
+        }
+
+        if (barking && hourOfDay < 8){
+            System.out.println("We wake up");
+            return true;
+        }
+
+        System.out.println("We don't wake up");
+        return false;
     }
 }

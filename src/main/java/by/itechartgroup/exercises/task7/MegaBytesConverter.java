@@ -1,4 +1,4 @@
-package by.itechartgroup.exercises;
+package by.itechartgroup.exercises.task7;
 
 public class MegaBytesConverter {
 
