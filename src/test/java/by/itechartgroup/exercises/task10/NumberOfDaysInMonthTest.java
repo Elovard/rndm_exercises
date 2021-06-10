@@ -1,11 +1,14 @@
 package by.itechartgroup.exercises.task10;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class NumberOfDaysInMonthTest {
 
@@ -17,9 +20,18 @@ class NumberOfDaysInMonthTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"-1, 10000", "13, -5", "-5, -1"})
-    void WhenProvidedYearAndMonthAreNotValid_ThenResultShouldBeTrue(int arg1, int arg2) {
-        int actualResult = NumberOfDaysInMonth.getDaysInMonth(arg1, arg2);
+    @MethodSource
+    void WhenProvidedYearAndMonthAreNotValid_ThenResultShouldBeTrue(int month, int year) {
+        int actualResult = NumberOfDaysInMonth.getDaysInMonth(month, year);
         assertEquals(-1, actualResult);
     }
+
+    private static Stream<Arguments> WhenProvidedYearAndMonthAreNotValid_ThenResultShouldBeTrue() {
+        return Stream.of(
+                Arguments.of(-1, 10000),
+                Arguments.of(13, -1),
+                Arguments.of(15, -30)
+        );
+    }
+
 }
