@@ -2,23 +2,32 @@ package by.itechartgroup.exercises.task13;
 
 public class TeenNumberChecker {
 
+    public static final int MIN_ALLOWED_AGE = 13;
+    public static final int MAX_ALLOWED_AGE = 19;
+
     public static boolean hasTeen(int age1, int age2, int age3) {
-        if (age1 >= 13 && age1 <= 19) {
+        // TODO: 6/10/21 replace else-ifs with early return
+        if (age1 >= MIN_ALLOWED_AGE && age1 <= MAX_ALLOWED_AGE) {
             System.out.println("teen");
             return true;
-        } else if (age2 >= 13 && age2 <= 19) {
+        }
+
+        if (age2 >= MIN_ALLOWED_AGE && age2 <= MAX_ALLOWED_AGE) {
             System.out.println("teen");
             return true;
-        } else if (age3 >= 13 && age3 <= 19) {
+        }
+
+        if (age3 >= MIN_ALLOWED_AGE && age3 <= MAX_ALLOWED_AGE) {
             System.out.println("teen");
             return true;
-        } else
-            System.out.println("Nothing found");
+            // TODO: 6/10/21 add braces
+        }
+        System.out.println("Nothing found");
         return false;
     }
 
     public static boolean isTeen(int age) {
-        if (age >= 13 && age <= 19) {
+        if (age >= MIN_ALLOWED_AGE && age <= MAX_ALLOWED_AGE) {
             System.out.println("teen");
             return true;
         } else

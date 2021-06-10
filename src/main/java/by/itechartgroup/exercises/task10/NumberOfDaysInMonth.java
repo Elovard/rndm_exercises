@@ -6,24 +6,28 @@ public class NumberOfDaysInMonth {
         return ((year > 0 && year <= 9999) && ((year % 4 == 0 && year % 100 != 0 || year % 400 == 0)));
     }
 
-    public static int getDaysInMonth(int month, int year) {
-        int[] DayInMonthCalendar = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 30, 30, 31};
-        int DaysInMonth = 0;
+    public static int getDaysInMonth(final int month, final int year) {
+        // TODO: 6/10/21 remove first arg
+        int[] dayInMonthCalendar = {31, 28, 31, 30, 31, 30, 31, 31, 30, 30, 30, 31};
+
+        // TODO: 6/10/21 fix naming
+        int daysInMonth = 0;
         if ((month <= 0 || month > 12 || (year <= 0 || year > 9999))) {
             return -1;
         }
 
         boolean leapYear = isLeapYear(year);
 
+        // TODO: 6/10/21 refactor (simplify)
         if (!leapYear) {
-            DaysInMonth = DayInMonthCalendar[month];
+            daysInMonth = dayInMonthCalendar[month];
         } else {
-            DayInMonthCalendar[2]++;
-            DaysInMonth = DayInMonthCalendar[month];
-            if (month == 2) {
-                DaysInMonth = DayInMonthCalendar[month];
+            dayInMonthCalendar[1]++;
+            daysInMonth = dayInMonthCalendar[month];
+            if (month == 1) {
+                daysInMonth = dayInMonthCalendar[month];
             }
         }
-        return DaysInMonth;
+        return daysInMonth;
     }
 }
