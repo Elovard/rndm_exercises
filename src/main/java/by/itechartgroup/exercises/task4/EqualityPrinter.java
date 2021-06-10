@@ -2,10 +2,6 @@ package by.itechartgroup.exercises.task4;
 
 public class EqualityPrinter {
 
-    public static void main(String[] args) {
-        printEqual(1,2,3);
-    }
-
     public static void printEqual(int param1, int param2, int param3){
         if(param1 < 0 || param2 < 0 || param3 < 0)
             System.out.println("Invalid value");

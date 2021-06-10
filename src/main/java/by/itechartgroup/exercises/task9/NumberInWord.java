@@ -2,10 +2,6 @@ package by.itechartgroup.exercises.task9;
 
 public class NumberInWord {
 
-    public static void main(String[] args) {
-        System.out.println(printNumberInWord(5));
-    }
-
     public static String printNumberInWord(int number){
         switch (number){
             case 0:

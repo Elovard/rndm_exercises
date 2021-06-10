@@ -2,10 +2,6 @@ package by.itechartgroup.exercises.task6;
 
 public class LeapYearCalculator {
 
-    public static void main(String[] args) {
-        isLeapYear(228);
-    }
-
     public static boolean isLeapYear(int year) {
         if (year >= 1 && year <= 9999) {
             if (year % 4 == 0) {

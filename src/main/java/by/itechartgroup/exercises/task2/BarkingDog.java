@@ -2,10 +2,6 @@ package by.itechartgroup.exercises.task2;
 
 public class BarkingDog {
 
-    public static void main(String[] args) {
-        shouldWakeUp(true, 23);
-    }
-
     public static boolean shouldWakeUp(boolean barking, int hourOfDay){
         if(hourOfDay > 24){
             System.out.println("Invalid time");

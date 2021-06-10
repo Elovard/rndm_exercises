@@ -2,10 +2,6 @@ package by.itechartgroup.exercises.task7;
 
 public class MegaBytesConverter {
 
-    public static void main(String[] args) {
-        printMegaBytesAndKiloBytes(1337);
-    }
-
     public static void printMegaBytesAndKiloBytes(int kiloBytes){
         if(kiloBytes < 0){
             System.out.println("Invalid value");
