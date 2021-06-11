@@ -2,7 +2,6 @@ package by.itechartgroup.exercises.task13;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -29,7 +28,7 @@ class TeenNumberCheckerTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"15, 16,17", "13, 18, 16", "14, 15, 18"})
+    @MethodSource
     void WhenAgesAreWithin13And19_ThenResultShouldBeTrue(int age1, int age2, int age3) {
         boolean actualResult = TeenNumberChecker.hasTeen(age1, age2, age3);
         assertTrue(actualResult);
