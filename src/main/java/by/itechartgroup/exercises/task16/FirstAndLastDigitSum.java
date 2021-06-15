@@ -4,7 +4,7 @@ public class FirstAndLastDigitSum {
 
     public static int sumFirstAndLastDigit(int number) {
         if (number < 0) {
-            return -1;
+            throw new IllegalArgumentException("zero");
         }
 
         int firstDigit = 0;
