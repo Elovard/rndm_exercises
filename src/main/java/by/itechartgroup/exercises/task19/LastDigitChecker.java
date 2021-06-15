@@ -20,17 +20,11 @@ public class LastDigitChecker {
         int lastDigOfSecond = num2 % 10;
         int lastDigOfThird = num3 % 10;
 
-        if ((lastDigOfFirst == lastDigOfSecond) || ((lastDigOfFirst == lastDigOfThird))
-                || ((lastDigOfSecond == lastDigOfThird))) {
-            return true;
-        }
-        return false;
+        return (lastDigOfFirst == lastDigOfSecond) || ((lastDigOfFirst == lastDigOfThird))
+                || ((lastDigOfSecond == lastDigOfThird));
     }
 
     public static boolean isValid(int num) {
-        if (num < MIN_RANGE || num > MAX_RANGE) {
-            return false;
-        }
-        return true;
+        return num >= MIN_RANGE && num <= MAX_RANGE;
     }
 }

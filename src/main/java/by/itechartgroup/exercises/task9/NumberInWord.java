@@ -2,8 +2,8 @@ package by.itechartgroup.exercises.task9;
 
 public class NumberInWord {
 
-    public static String printNumberInWord(int number){
-        switch (number){
+    public static String printNumberInWord(int number) {
+        switch (number) {
             case 0:
                 return "Zero";
             case 1:

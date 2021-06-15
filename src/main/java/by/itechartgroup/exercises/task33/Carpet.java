@@ -2,7 +2,7 @@ package by.itechartgroup.exercises.task33;
 
 public class Carpet {
 
-    private double cost;
+    private final double cost;
 
     public Carpet(double cost) {
         if (cost < 0) {

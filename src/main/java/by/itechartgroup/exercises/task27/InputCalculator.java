@@ -19,7 +19,7 @@ public class InputCalculator {
                 sum += num;
                 average = sum / counter;
             } else {
-                System.out.println("Sum: " + sum + ", average: " + ((long) Math.round(average)));
+                System.out.println("Sum: " + sum + ", average: " + Math.round(average));
                 break;
             }
             scan.nextLine();

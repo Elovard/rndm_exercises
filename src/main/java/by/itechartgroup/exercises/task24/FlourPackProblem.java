@@ -7,9 +7,6 @@ public class FlourPackProblem {
             return false;
         }
         bigCount *= 5;
-        if (bigCount + smallCount >= goal && smallCount >= goal % 5) {
-            return true;
-        }
-        return false;
+        return bigCount + smallCount >= goal && smallCount >= goal % 5;
     }
 }

@@ -21,9 +21,6 @@ public class SharedDigit {
         if ((lastDigOfX == lastDigOfY) || ((firstDigOfX == firstDigOfY))) {
             return true;
         }
-        if ((lastDigOfX == firstDigOfY) || ((firstDigOfX == lastDigOfY))) {
-            return true;
-        }
-        return false;
+        return (lastDigOfX == firstDigOfY) || ((firstDigOfX == lastDigOfY));
     }
 }

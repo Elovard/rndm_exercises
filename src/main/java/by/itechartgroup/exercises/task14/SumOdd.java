@@ -6,10 +6,7 @@ public class SumOdd {
         if (number < 0) {
             return false;
         }
-        if (number % 2 != 0) {
-            return true;
-        }
-        return false;
+        return number % 2 != 0;
     }
 
     public static int sumOdd(int start, int end) {

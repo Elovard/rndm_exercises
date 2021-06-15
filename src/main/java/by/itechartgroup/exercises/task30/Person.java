@@ -35,10 +35,7 @@ public class Person {
     }
 
     public boolean isTeen() {
-        if (age > 12 && age < 20) {
-            return true;
-        }
-        return false;
+        return age > 12 && age < 20;
     }
 
     public String getFullName() {
