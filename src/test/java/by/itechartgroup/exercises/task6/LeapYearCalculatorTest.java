@@ -4,7 +4,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LeapYearCalculatorTest {
 
@@ -24,8 +23,8 @@ class LeapYearCalculatorTest {
 
     @ParameterizedTest
     @ValueSource(ints = {2016, 1916, 2020})
-    void WhenYearIsDividedByOneHundredAndByFourHundred_ThenResultShouldBeTrue(int arg1) {
+    void WhenYearIsDividedByOneHundredAndByFourHundred_ThenResultShouldBeFalse(int arg1) {
         boolean actualResult = LeapYearCalculator.isLeapYear(arg1);
-        assertTrue(actualResult);
+        assertFalse(actualResult);
     }
 }
