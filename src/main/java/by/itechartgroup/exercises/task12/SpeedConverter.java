@@ -4,8 +4,7 @@ public class SpeedConverter {
 
     public static long toMilesPerHour(double kilometersPerHour) {
         if (kilometersPerHour < 0) {
-            System.out.println("Invalid value");
-            return -1;
+            throw new IllegalArgumentException("zero");
         }
         long milesPerHour = (long) (kilometersPerHour / 1.60d);
         System.out.println(kilometersPerHour + " km/h is " + milesPerHour + " mi/h");
