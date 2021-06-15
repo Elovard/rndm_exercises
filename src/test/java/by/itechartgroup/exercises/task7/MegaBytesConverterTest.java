@@ -13,7 +13,7 @@ class MegaBytesConverterTest {
     @ParameterizedTest
     @MethodSource
     void WhenKiloBytesAreNegative_ThenResultShouldBeFalse(int kiloBytes){
-        assertThrows(Exception.class, ()-> MegaBytesConverter.printMegaBytesAndKiloBytes(kiloBytes));
+        assertThrows(IllegalArgumentException.class, ()-> MegaBytesConverter.printMegaBytesAndKiloBytes(kiloBytes));
     }
 
     private static Stream<Arguments> WhenKiloBytesAreNegative_ThenResultShouldBeFalse(){
